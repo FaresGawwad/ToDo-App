@@ -1,15 +1,13 @@
-// ...existing code...
 
-// Selectors
 const input = document.querySelector('.newTask-input');
 const addBtn = document.querySelector('.add-btn');
 const todoList = document.querySelector('.taskToDo');
 
-// Load todos from localStorage
+
 let todos = JSON.parse(localStorage.getItem('todos')) || [];
 renderTodos();
 
-// Add todo
+
 addBtn.addEventListener('click', () => {
     const title = input.value.trim();
     if (!title) {
@@ -22,7 +20,7 @@ addBtn.addEventListener('click', () => {
     input.value = '';
 });
 
-// Mark as done or delete (for both taskToDo and done-tasks)
+
 document.addEventListener('click', (e) => {
     // Check button (toggle done)
     if (e.target.closest('.check-btn')) {
@@ -44,13 +42,13 @@ document.addEventListener('click', (e) => {
     }
 });
 
-// Save to localStorage and render
+
 function saveAndRender() {
     localStorage.setItem('todos', JSON.stringify(todos));
     renderTodos();
 }
 
-// Render todos
+
 function renderTodos() {
     // Clear taskToDo and done-tasks (except headers)
     todoList.innerHTML = '<p class="taskToDo-header">Task to do</p>';
@@ -94,4 +92,3 @@ function renderTodos() {
         }
     });
 }
-// ...existing code...

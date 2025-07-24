@@ -67,10 +67,10 @@ function renderTodos() {
                 <p class="task-paragraph">${todo.title}</p>
                 <div class="task-btns">
                     <button class="check-btn">
-                        <img src="images/Group 1.svg" alt="check">
+                        <img src="Group 1.svg" alt="check">
                     </button>
                     <button class="delete-btn">
-                        <img src="images/Group 2.svg" alt="delete">
+                        <img src="Group 2.svg" alt="delete">
                     </button>
                 </div>
             `;
@@ -85,7 +85,7 @@ function renderTodos() {
                     <p style="margin: 0 0 0 10px;">${todo.title}</p>
                     <div class="task-btns">
                         <button class="delete-btn">
-                            <img src="images/Group 2.svg" alt="delete">
+                            <img src="Group 2.svg" alt="delete">
                         </button>
                     </div>
                 </div>
